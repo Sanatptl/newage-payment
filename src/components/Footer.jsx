@@ -2,6 +2,7 @@ import styles from "../style";
 import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
 
+const year = new Date().getFullYear();
 const Footer = () => {
   return (
     <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
@@ -46,9 +47,9 @@ const Footer = () => {
         </div>
       </div>
 
-        <div className="flex md:flex-row flex-col w-full items-center pt-6 justify-between border-t-[1px] border-t-[#3F3E45]">
+      <div className="flex md:flex-row flex-col w-full items-center pt-6 justify-between border-t-[1px] border-t-[#3F3E45]">
         <p className="font-poppins font-normal text-[18px] leading-[27px] text-white text-center">
-          Copyright Ⓒ 2022 HooBank. All Rights Reserved.
+          {`Copyright Ⓒ ${year} HooBank. All Rights Reserved`}.
         </p>
         <div className="flex flex-row md:mt-0 mt-6">
           {socialMedia.map((social, ind) => {
